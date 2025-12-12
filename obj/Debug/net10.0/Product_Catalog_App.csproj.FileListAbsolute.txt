@@ -95,3 +95,4 @@ C:\Users\zahid\Desktop\Product_Catalog_App\obj\Debug\net10.0\refint\Product_Cata
 C:\Users\zahid\Desktop\Product_Catalog_App\obj\Debug\net10.0\Product_Catalog_App.pdb
 C:\Users\zahid\Desktop\Product_Catalog_App\obj\Debug\net10.0\Product_Catalog_App.genruntimeconfig.cache
 C:\Users\zahid\Desktop\Product_Catalog_App\obj\Debug\net10.0\ref\Product_Catalog_App.dll
+C:\Users\zahid\Desktop\Product_Catalog_App\obj\Debug\net10.0\Product_Catalog_App.sourcelink.json
