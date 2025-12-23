@@ -26,8 +26,8 @@
             _products.Add(new Product { ProductId = 3, CategoryId = 1, Name = "iPhone 17 Air", Image = "iphone_17_air.jpg", Price = 79999, IsActive = true });
             _products.Add(new Product { ProductId = 4, CategoryId = 1, Name = "iPhone 17 Pro Max", Image = "iphone_17_pro_max.jpg", Price = 149999, IsActive = true });
             _products.Add(new Product { ProductId = 5, CategoryId = 2, Name = "Macbook Air", Image = "macbook_air.jpg", Price = 89999, IsActive = true });
-            _products.Add(new Product { ProductId = 6, CategoryId = 3, Name = "Macbook Pro", Image = "macbook_pro.jpg", Price = 129999, IsActive = true });
-            _products.Add(new Product { ProductId = 7, CategoryId = 4, Name = "iMac", Image = "imac.jpg", Price = 199999, IsActive = true });
+            _products.Add(new Product { ProductId = 6, CategoryId = 2, Name = "Macbook Pro", Image = "macbook_pro.jpg", Price = 129999, IsActive = true });
+            _products.Add(new Product { ProductId = 7, CategoryId = 2, Name = "iMac", Image = "imac.jpg", Price = 199999, IsActive = true });
         }
     }
 }
