@@ -25,13 +25,20 @@ namespace Product_Catalog_App.Controllers
             var model = new ProductViewModel
             {
               Products = products,
-              Categories = Repository.Categories,   
+              Categories = Repository.Categories,
               SelectedCategory = category  
             };
             return View(model);
         }
+        [HttpGet]
+        public IActionResult Create()
+        {
+            ViewBag.Categories = Repository.Categories;
+            return View();
+        }
 
-        public IActionResult Privacy()
+        [HttpPost]
+        public IActionResult Create(Product product)
         {
             return View();
         }
