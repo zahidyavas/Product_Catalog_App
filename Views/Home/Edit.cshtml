@@ -1,10 +1,11 @@
 @model  Product
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
 }
 
-<form asp-controller="Home" asp-action="Create" method="post">
+<form asp-controller="Home" asp-action="Edit" method="post" enctype="multipart/form-data">
     <div asp-validation-summary="All"></div>
+    <input type="hidden" asp-for="ProductId" />
     <div class="mb-3">
         <label for="Name" class="form-label">Name</label>
         <input asp-for="Name" class="form-control">
@@ -17,12 +18,13 @@
         <span asp-validation-for="Price" class="text-danger"></span>
     </div>
 
-    <div class="mb-3">
-        <label asp-for="Image" class="form-label">Image</label>
-        <input asp-for="Image" class="form-control">
-        <span asp-validation-for="Image" class="text-danger"></span>
+    <div class="input-group mb-3">
+        <input type="file" name="imageFile" id="imageFile" class="form-control">
     </div>
-
+    <div>
+        <img src="~/img/@Model.Image" alt="" style="width: 100px;">
+        <input type="hidden" asp-for="@Model.Image" />
+    </div>
     <div class="mb-3">
         <label asp-for="CategoryId" class="form-label">Category</label>
         <select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-select">

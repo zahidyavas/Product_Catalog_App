@@ -16,6 +16,42 @@
             get { return _categories; }
         }
 
+        public static void CreateProduct(Product entity)
+        {
+            _products.Add(entity);
+        }
+
+        public static void EditProduct(Product updatedProduct)
+        {
+            var entity = _products.FirstOrDefault(p => p.ProductId == updatedProduct.ProductId);
+            if(entity != null)
+            {
+                entity.Name = updatedProduct.Name;
+                entity.Image = updatedProduct.Image;
+                entity.Price = updatedProduct.Price;
+                entity.CategoryId = updatedProduct.CategoryId;
+                entity.IsActive = updatedProduct.IsActive;
+            }
+        }
+
+        public static void EditIsActive (Product updatedProduct)
+        {
+            var entity = _products.FirstOrDefault(p => p.ProductId == updatedProduct.ProductId);
+            if(entity != null)
+            {
+                entity.IsActive = updatedProduct.IsActive;
+            }
+        }
+
+        public static void DeleteProduct(Product deletedProduct)
+        {
+            var entity = _products.FirstOrDefault(p => p.ProductId == deletedProduct.ProductId);
+            if (entity != null)
+            {
+                _products.Remove(entity);
+            }
+        }
+
         static Repository() // Static constructor was created to initialize data
         {
             _categories.Add(new Category { CategoryId = 1, Name = "iPhone" });
